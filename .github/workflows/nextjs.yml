@@ -74,10 +74,9 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: |
-            ls
-            mv ./app/package-lock.json ./package-lock.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/app/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json
             ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-            mv ./package-lock.json ./app/package-lock.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/app/package-lock.json
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
