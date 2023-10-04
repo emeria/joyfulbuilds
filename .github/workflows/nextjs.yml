@@ -34,12 +34,12 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/my-app/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/app/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
             exit 0
-          elif [ -f "${{ github.workspace }}/my-app/package.json" ]; then
+          elif [ -f "${{ github.workspace }}/app/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
@@ -53,7 +53,7 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: "./my-app/package-lock.json"
+          cache-dependency-path: "./app/package-lock.json"
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
@@ -74,11 +74,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: |
-            mv /home/runner/work/joyfulbuilds/joyfulbuilds/my-app/package.json /home/runner/work/joyfulbuilds/joyfulbuilds/package.json
-            mv /home/runner/work/joyfulbuilds/joyfulbuilds/my-app/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/app/package.json /home/runner/work/joyfulbuilds/joyfulbuilds/package.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/app/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json
             ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-            mv /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/my-app/package-lock.json
-            mv /home/runner/work/joyfulbuilds/joyfulbuilds/package.json /home/runner/work/joyfulbuilds/joyfulbuilds/my-app/package.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/package-lock.json /home/runner/work/joyfulbuilds/joyfulbuilds/app/package-lock.json
+            mv /home/runner/work/joyfulbuilds/joyfulbuilds/package.json /home/runner/work/joyfulbuilds/joyfulbuilds/app/package.json
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
