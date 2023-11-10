@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="top-bar">
-        <span className="logo">### ### ####</span>
+        <span className="logo"></span>
         <ul>
           <li><Link to="#"><IonIcon icon={logoFacebook} aria-label="social-linkedin"></IonIcon></Link></li>
           <li><Link to="#"><IonIcon icon={logoGithub} aria-label="social-github"></IonIcon></Link></li>
