@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { IonIcon } from '@ionic/react';
 import { logoFacebook, logoGithub, logoTwitter, menuOutline, closeOutline } from 'ionicons/icons';
+import logo from '../assets/joyfulbuild.png';
 
 const Navbar: React.FC = () => {
 
@@ -27,7 +28,7 @@ const Navbar: React.FC = () => {
 
       <nav>
         <div className="logo">
-          <Link to="#"><img src="./src/assets/joyfulbuild.png" alt="Joyful Build Logo" /> Logo</Link>
+          <Link to="#"><img src={logo} alt="Joyful Build Logo" /></Link>
         </div>
         <div className="toggle" onClick={toggleMobileMenu}>
           <Link to="#"><IonIcon icon={isMobileMenuOpen ? closeOutline : menuOutline} aria-label="nav-menu-toggle"></IonIcon></Link>
