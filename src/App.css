@@ -1,0 +1,104 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+/*  */
+
+/* Global Styles */
+/* body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between; /* Aligns content to the right */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff; /* Or any color of your choice */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* fix to top */
+
+
+.logo {
+  margin-right: auto; /* Pushes everything else to the right */
+}
+
+.nav-links {
+  display: flex; /* Ensures nav items are inline */
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+      flex-direction: column;
+  }
+
+  .nav-links a {
+    margin-left: 20px; /* Spacing between links */
+    text-decoration: none;
+    color: #333; 
+  }
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff; /* Accent color */
+} 
+
+
+
+
+
+
+/* Main Content Area */
+.main-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Table of Contents */
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+}
+
+.table-of-contents li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.table-of-contents li a:hover {
+  color: #007bff;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
