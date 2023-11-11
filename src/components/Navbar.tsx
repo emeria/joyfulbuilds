@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
       <nav>
         <div className="logo">
-          <Link to="#"><img src={logo} alt="Joyful Build Logo" />Joyful Build</Link>
+          <Link to="/"><img src={logo} alt="Joyful Build Logo" />Joyful Build</Link>
         </div>
         <div className="toggle" onClick={toggleMobileMenu}>
           <Link to="#"><IonIcon icon={isMobileMenuOpen ? closeOutline : menuOutline} aria-label="nav-menu-toggle"></IonIcon></Link>

@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+/* Adding bullets back in due to the global 0 padding */
+ul {
+  padding: 0;
+  margin-left: 10px; 
+  list-style: none;
+}
+li {
+  margin-left: 20px; 
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -107,8 +117,3 @@ nav a:hover {
     cursor: pointer;
   }
 }
-
-
-/* 5:15 */
-
-

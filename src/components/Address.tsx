@@ -3,7 +3,7 @@ import React from 'react';
 const Address: React.FC = () => {
   return (
     <div className="address">
-      <h3>Our Address</h3>
+      <h3>Our Location</h3>
       <p>Colchester, CT 06415</p>
       <p>US</p>
     </div>

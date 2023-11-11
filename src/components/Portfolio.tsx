@@ -1,25 +1,55 @@
 import React from 'react'
 import PortfolioItem from './PortfolioItem';
 
+export const portfolioData = [
+    {
+        title: 'CheatSheetMonster',
+        description: 'A site that collects various cheatsheets for games together in one place.',
+        link: 'https://cheatsheet.monster'
+    },
+    {
+        title: 'CheatSheetMonster',
+        description: 'A site that collects various cheatsheets for games together in one place.',
+        link: 'https://cheatsheet.monster'
+    },
+    {
+        title: 'CheatSheetMonster',
+        description: 'A site that collects various cheatsheets for games together in one place.',
+        link: 'https://cheatsheet.monster'
+    },
+    {
+        title: 'CheatSheetMonster',
+        description: 'A site that collects various cheatsheets for games together in one place.',
+        link: 'https://cheatsheet.monster'
+    },
+];
+
+export const chrisPortfolioData = [
+    {
+        title: 'CDAS',
+        description: 'A solution that enabled various state agencies to aggregate, organize, and analyze data from disparate sources. The components were flexible and provided rapid development capabilities for HIE services, analytics, and reporting. This solution would be used to allow the state to better understand the impact of COVID-19 on the state and its residents.',
+        link: 'https://www.biznet.ct.gov/SCP_Documents/Results/22205/UConn%20AIMS%20OHS%20Statement%20of%20Work%202%20(CDAS)_Executed_20201016.pdf'
+    },
+    {
+        title: 'CDAS',
+        description: 'A solution that enabled various state agencies to aggregate, organize, and analyze data from disparate sources. The components were flexible and provided rapid development capabilities for HIE services, analytics, and reporting. This solution would be used to allow the state to better understand the impact of COVID-19 on the state and its residents.',
+        link: 'https://www.biznet.ct.gov/SCP_Documents/Results/22205/UConn%20AIMS%20OHS%20Statement%20of%20Work%202%20(CDAS)_Executed_20201016.pdf'
+    },
+    {
+        title: 'CDAS',
+        description: 'A solution that enabled various state agencies to aggregate, organize, and analyze data from disparate sources. The components were flexible and provided rapid development capabilities for HIE services, analytics, and reporting. This solution would be used to allow the state to better understand the impact of COVID-19 on the state and its residents.',
+        link: 'https://www.biznet.ct.gov/SCP_Documents/Results/22205/UConn%20AIMS%20OHS%20Statement%20of%20Work%202%20(CDAS)_Executed_20201016.pdf'
+    },
+    {
+        title: 'CDAS',
+        description: 'A solution that enabled various state agencies to aggregate, organize, and analyze data from disparate sources. The components were flexible and provided rapid development capabilities for HIE services, analytics, and reporting. This solution would be used to allow the state to better understand the impact of COVID-19 on the state and its residents.',
+        link: 'https://www.biznet.ct.gov/SCP_Documents/Results/22205/UConn%20AIMS%20OHS%20Statement%20of%20Work%202%20(CDAS)_Executed_20201016.pdf'
+    },
+];
+
 const Portfolio: React.FC = () => {
 
-    const portfolioData = [
-        {
-            title: 'CheatSheetMonster',
-            description: 'A site that collects various cheatsheets for games together in one place.',
-            link: 'https://cheatsheet.monster'
-        },
-        // Add more projects as needed
-    ];
 
-    const chrisPortfolioData = [
-        {
-            title: 'CDAS',
-            description: 'A solution that enabled various state agencies to aggregate, organize, and analyze data from disparate sources. The components were flexible and provided rapid development capabilities for HIE services, analytics, and reporting. This solution would be used to allow the state to better understand the impact of COVID-19 on the state and its residents.',
-            link: 'https://www.biznet.ct.gov/SCP_Documents/Results/22205/UConn%20AIMS%20OHS%20Statement%20of%20Work%202%20(CDAS)_Executed_20201016.pdf'
-        },
-        // Add more projects as needed
-    ];
     return (
         <>
             <h1 id="portfolio">Portfolio</h1>

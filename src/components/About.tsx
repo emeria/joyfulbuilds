@@ -33,6 +33,8 @@ const About: React.FC = () => {
         )}
       </ul>
 
+      <br/>
+
       <h2 id="intro">Capabilities</h2>
 
       <h3>Languages & Databases</h3>

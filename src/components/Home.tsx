@@ -1,14 +1,17 @@
 import React from 'react';
+import '../styles/Home.css';
 
 const Home : React.FC = () =>{
   return (
-    <div>
-      <h1 id="intro">Chris Gracia</h1>
+    <div className='home'>
+      <h1 id="intro">Development should be fun.</h1>
+      <p>Build or refine your digital footprint.</p>
+      
+
+      <h2 id="developer">Chris Gracia</h2>
       <p>Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
       
-      <h1 id="features">Features</h1>
-      <p>Our site offers a variety of features including...</p>
-      {/* You can add more content and sections here */}
+{/* implement portfolio section */}
     </div>
   );
 }
