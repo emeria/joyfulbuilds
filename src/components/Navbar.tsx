@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { IonIcon } from '@ionic/react';
-import { logoFacebook, logoGithub, logoTwitter, menuOutline, closeOutline } from 'ionicons/icons';
+import { logoLinkedin, logoGithub, logoTwitter, menuOutline, closeOutline } from 'ionicons/icons';
 import logo from '../assets/joyfulbuild.png';
 
 const Navbar: React.FC = () => {
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
       <div className="top-bar">
         <span className="logo"></span>
         <ul>
-          <li><Link to="#"><IonIcon icon={logoFacebook} aria-label="social-linkedin"></IonIcon></Link></li>
+          <li><Link to="#"><IonIcon icon={logoLinkedin} aria-label="social-linkedin"></IonIcon></Link></li>
           <li><Link to="#"><IonIcon icon={logoGithub} aria-label="social-github"></IonIcon></Link></li>
           <li><Link to="#"><IonIcon icon={logoTwitter} aria-label="social-twitter"></IonIcon></Link></li>
         </ul>
@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
         <ul className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
+          <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
