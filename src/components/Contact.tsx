@@ -1,14 +1,13 @@
 import React from 'react';
-import Address from './Address';
 import Map from './Map';
 import EmailForm from './EmailForm';
+import '../styles/Contact.css';
 
 const Contact: React.FC = () => {
   return (
     <div>
-      <h1>Contact Us</h1>
+      <h1 className='contact-heading'>Contact Us</h1>
       <EmailForm />
-      <Address />
       <Map />
     </div>
   );

@@ -7,6 +7,15 @@
     border-radius: 8px;
     text-align: center;
   }
+
+  .email-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
   
   .email-form h3 {
     margin-bottom: 1.5rem;
@@ -43,5 +52,21 @@
   
   .email-form button:hover {
     background-color: #0056b3; /* Darker shade on hover */
+  }
+
+  .response-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .email-heading {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
   }
   
