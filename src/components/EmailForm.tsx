@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm(import.meta.env.EMAILJS_SERVICE_ID, import.meta.env.EMAILJS_TEMPLATE_ID, e.currentTarget, import.meta.env.EMAILJS_USER_ID)
+    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.currentTarget, import.meta.env.VITE_EMAILJS_USER_ID)
       .then((result) => {
           console.log('Email successfully sent!', result.text);
           // Reset the form or provide a success message
