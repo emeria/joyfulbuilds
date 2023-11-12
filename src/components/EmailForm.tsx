@@ -38,8 +38,10 @@
 
 // export default EmailForm;
 
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+// import React, { useState, ChangeEvent, FormEvent } from 'react';
 import '../styles/EmailForm.css';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import emailjs from 'emailjs-com';
 
 interface FormData {
   name: string;
@@ -50,34 +52,25 @@ interface FormData {
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxRfKSYQFMgrdjtnufJvY-QXFN29dCHiAhUOSaeb4oEvdyF1zpAW3GSvuDOWSka4EJokg/exec', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json'
-        }
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm(import.meta.env.EMAILJS_SERVICE_ID, import.meta.env.EMAILJS_TEMPLATE_ID, e.currentTarget, import.meta.env.EMAILJS_USER_ID)
+      .then((result) => {
+          console.log('Email successfully sent!', result.text);
+          // Reset the form or provide a success message
+      }, (error) => {
+          console.log('Failed to send email:', error.text);
+          // Handle errors here
       });
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        // Reset form or provide further user feedback
-      } else {
-        console.error('Form submission error');
-        // Handle errors
-      }
-    } catch (error) {
-      console.error('Submission failed', error);
-    }
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <form onSubmit={handleSubmit} className='email-form'>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"
