@@ -3,3 +3,26 @@
     color: #333;
     text-align: center;
   }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .email-form,
+  .map-container {
+    flex: 1 1 300px; /* Grow and shrink starting from 300px */
+    max-width: calc(50% - 20px); /* Adjust for the gap */
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 600px) {
+    .email-form,
+    .map-container {
+      max-width: 100%;
+    }
+  }
+  

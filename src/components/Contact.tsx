@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     <div>
       <h1 className='contact-heading'>Contact Us</h1>
       <EmailForm />
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 }
