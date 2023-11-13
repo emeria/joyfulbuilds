@@ -1,51 +1,38 @@
+/* Style for the expertise section */
 .expertise-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Space between items */
-    list-style: none; /* Remove default list styling */
-    padding: 0;
     text-align: center;
+    padding: 20px;
   }
- 
-  .expertise-container li:not(:last-child)::after {
-    content: '•'; /* Unicode character for a dot */
-    margin-left: 10px;
-    color: #333;
-  }
-
-  .expertise-item {
-    display: inline; /* Or 'inline-block' based on your preference */
+  
+  .expertise-item, .capability-item {
+    display: inline-block; /* Allows for wrapping */
+    margin: 5px 2px; /* Space around items */
   }
   
   .expertise-item:not(:last-child)::after {
-    content: ' • '; /* Unicode character for a dot with spaces */
-    color: #333; /* Adjust the color as needed */
+    content: ' • '; /* Dot separator */
   }
   
-
-  /* capabilities */
+  /* Style for the capabilities section */
   .capabilities-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout */
     gap: 20px; /* Space between grid items */
-    padding: 20px;
+    margin: 20px;
   }
   
   .capability-category {
     list-style: none; /* Remove default list styling */
   }
   
-  .capability-category li:not(:last-child)::after {
-    content: '•'; /* Unicode character for a dot */
-    margin-left: 10px;
-    color: #333;
+  .capability-item:not(:last-child)::after {
+    content: ' • '; /* Dot separator */
   }
   
   /* Responsive layout for smaller screens */
   @media (max-width: 600px) {
     .capabilities-container {
-      grid-template-columns: 1fr; /* Single column */
+      grid-template-columns: 1fr; /* Single column on smaller screens */
     }
   }
   
