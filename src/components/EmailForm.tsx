@@ -41,6 +41,7 @@ const ContactForm: React.FC = () => {
         <input
           type="text"
           name="name"
+          id="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Your Name"
@@ -51,6 +52,7 @@ const ContactForm: React.FC = () => {
         <input
           type="email"
           name="email"
+          id='email'
           value={formData.email}
           onChange={handleChange}
           placeholder="Your Email"
@@ -60,6 +62,7 @@ const ContactForm: React.FC = () => {
       <label htmlFor="message">Message</label>
         <textarea
           name="message"
+          id='message'
           value={formData.message}
           onChange={handleChange}
           placeholder="Your Message"
