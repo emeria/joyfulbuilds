@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { IonIcon } from '@ionic/react';
-import { logoLinkedin, logoGithub, logoTwitter, menuOutline, closeOutline } from 'ionicons/icons';
+import { menuOutline, closeOutline } from 'ionicons/icons';
 import logo from '../assets/joyfulbuild.png';
 
 const Navbar: React.FC = () => {
@@ -17,13 +17,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="top-bar">
-        <span className="logo"></span>
-        <ul>
-          <li><Link to="#"><IonIcon icon={logoLinkedin} aria-label="social-linkedin"></IonIcon></Link></li>
-          <li><Link to="#"><IonIcon icon={logoGithub} aria-label="social-github"></IonIcon></Link></li>
-          <li><Link to="#"><IonIcon icon={logoTwitter} aria-label="social-twitter"></IonIcon></Link></li>
-        </ul>
-
+        <span className="spacer"></span>
       </div>
 
       <nav>

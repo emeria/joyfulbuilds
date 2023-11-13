@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    background: #3e9ece; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
+  
+  .footer span {
+    color: #f8f8f8;  
+  }
+  
+  .footer ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer a{
+    margin: 0px 5px;
+  }
+  
+  .footer a:hover {
+    color: #14455e;
+  }
+  

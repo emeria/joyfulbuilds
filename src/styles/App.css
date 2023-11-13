@@ -22,7 +22,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #333;
   background-color: #f8f8f8;
-  height: 100vh;
+  height: 100%;
 }
 
 .top-bar {
@@ -117,4 +117,10 @@ nav a:hover {
     right: 20px;
     cursor: pointer;
   }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
 }
