@@ -1,38 +1,83 @@
+
+
+.intro-heading {
+    text-align: center;
+}
+
+.intro-container {
+    text-align: center;
+    padding: 0 1.5em;
+    margin: 0 1.5em 1.5em; border: 2px solid #ccc;
+}
+
+.intro-blurb {
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Style for the expertise section */
+
+.expertise-heading {
+    text-align: center;
+}
+
 .expertise-container {
     text-align: center;
     padding: 20px;
-  }
-  
-  .expertise-item, .capability-item {
-    display: inline-block; /* Allows for wrapping */
-    margin: 5px 2px; /* Space around items */
-  }
-  
-  .expertise-item:not(:last-child)::after {
-    content: ' • '; /* Dot separator */
-  }
-  
-  /* Style for the capabilities section */
-  .capabilities-container {
+}
+
+
+.expertise-item:not(:last-child)::after {
+    content: ' • ';
+    /* Dot separator */
+}
+
+
+/* Style for the capabilities section */
+.capabilities-heading {
+    text-align: center;
+}
+
+.capabilities-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 grid layout */
+    gap: 20px;
+    /* Space between grid items */
     margin: 20px;
-  }
-  
-  .capability-category {
-    list-style: none; /* Remove default list styling */
-  }
-  
-  .capability-item:not(:last-child)::after {
-    content: ' • '; /* Dot separator */
-  }
-  
-  /* Responsive layout for smaller screens */
-  @media (max-width: 600px) {
+}
+
+.capability-category {
+    list-style: none;
+    /* Remove default list styling */
+    border: 2px solid #ccc;
+    /* Adjust color and thickness as needed */
+    padding: 10px;
+    border-radius: 8px;
+    /* Optional for rounded corners */
+    list-style: none;
+    /* Remove default list styling */
+    margin-bottom: 20px;
+    /* Space between categories */
+}
+
+.capability-item:not(:last-child)::after {
+    content: ' • ';
+    /* Dot separator */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
     .capabilities-container {
-      grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
     }
-  }
-  
+}
+
+.expertise-item,
+.capability-item {
+    display: inline-block;
+    /* Allows for wrapping */
+    margin: 5px 2px;
+    /* Space around items */
+}

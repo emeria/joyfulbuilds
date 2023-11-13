@@ -23,11 +23,14 @@ const About: React.FC = () => {
   );
 
   return (
-    <div>
-      <h1 id="intro">Chris Gracia</h1>
-      <p>Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
+    <>
+      <h1 className="intro-heading">Chris Gracia</h1>
 
-      <h2 id="intro">Expertise</h2>
+      <div className="intro-container">
+        <p className="intro-blurb">Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
+        <p className="intro-details">Joyful Build is currently an agency of one. This means you will work directly with Chris Gracia, the founder of Joyful Build. </p>
+      </div>
+      <h2 className="expertise-heading">Expertise</h2>
       <div className="expertise-container">
         {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS)'].map((capability, index) =>
           <span
@@ -59,7 +62,7 @@ const About: React.FC = () => {
       </div>
 
 
-    </div>
+    </>
   );
 }
 
