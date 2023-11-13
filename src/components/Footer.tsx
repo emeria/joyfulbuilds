@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
       <div className="footer">
         <span className="spacer"></span>
         <ul>
-          <li><Link to="#"><IonIcon icon={logoLinkedin} aria-label="social-linkedin"></IonIcon></Link></li>
-          <li><Link to="#"><IonIcon icon={logoGithub} aria-label="social-github"></IonIcon></Link></li>
-          <li><Link to="#"><IonIcon icon={logoTwitter} aria-label="social-twitter"></IonIcon></Link></li>
+          <li><Link to="https://www.linkedin.com/in/christopher-gracia/"><IonIcon icon={logoLinkedin} aria-label="social-linkedin"></IonIcon></Link></li>
+          <li><Link to="https://github.com/emeria"><IonIcon icon={logoGithub} aria-label="social-github"></IonIcon></Link></li>
+          <li><Link to="https://twitter.com/cgracia"><IonIcon icon={logoTwitter} aria-label="social-twitter"></IonIcon></Link></li>
         </ul>
 
       </div>
