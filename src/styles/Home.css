@@ -1,4 +1,17 @@
+:root {
+    --primary-color: #0d0d0d;  /* Dark background */
+    --accent-color: #4dff4d;   /* Vibrant green */
+    --text-color: #ffffff;     /* White text */
+  }
+  
+
 .home {
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
   }
   

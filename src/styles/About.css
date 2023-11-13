@@ -81,3 +81,9 @@
     margin: 5px 2px;
     /* Space around items */
 }
+
+.dot {
+    color: var(--subtext-color);
+    font-family: Inter;
+    font-size: 1.5em;
+}

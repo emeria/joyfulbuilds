@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className='email-form'>
-        <h3 className='email-heading'>Send us an email</h3>
+        <h3 className='email-heading'>Get in touch</h3>
         
       <label htmlFor="name">Name</label>
         <input

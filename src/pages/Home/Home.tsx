@@ -4,7 +4,7 @@ import '../../styles/Home.css';
 const Home : React.FC = () =>{
   return (
     <div className='home'>
-      <h1 id="intro">Development should be fun.</h1>
+      <h1 className="intro">Development should be fun.</h1>
       <p>Build or refine your digital footprint.</p>
       
 

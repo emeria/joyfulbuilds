@@ -24,14 +24,14 @@ const About: React.FC = () => {
 
   return (
     <>
-      <h1 className="intro-heading">Chris Gracia</h1>
+      <h1 className="intro-heading">Chris Gracia<span className='dot'>.</span></h1>
 
       <div className="intro-container">
         <p className="intro-blurb">Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
         <p className="intro-details">Joyful Build is currently an agency of one. This means you will work directly with Chris Gracia, the founder of Joyful Build. </p>
       </div>
       <div className='expertise-section'>
-        <h2 className="expertise-heading">Expertise</h2>
+        <h2 className="expertise-heading">Expertise<span className='dot'>.</span></h2>
         <div className="expertise-container">
           {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS)'].map((capability, index) =>
             <span
@@ -44,7 +44,7 @@ const About: React.FC = () => {
       <br />
 
       <div className='capabilities-section'>
-        <h2 className="capabilities-heading">Capabilities</h2>
+        <h2 className="capabilities-heading">Capabilities<span className='dot'>.</span></h2>
         <div className="capabilities-container">
           <div>
             <h3>Languages & Databases</h3>
