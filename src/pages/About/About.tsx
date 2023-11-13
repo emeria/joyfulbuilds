@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import '../styles/About.css';
+import '../../styles/About.css';
 
 
 const languagesDatabases: string[] = ["C#", "Java", "PHP", "Python", "JS", "MySQL", "SQL Server", "HTML", "CSS"];

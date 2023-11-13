@@ -1,7 +1,7 @@
 import React from 'react';
 // import Map from './Map';
-import EmailForm from './EmailForm';
-import '../styles/Contact.css';
+import EmailForm from '../../components/EmailForm';
+import '../../styles/Contact.css';
 
 const Contact: React.FC = () => {
   return (
