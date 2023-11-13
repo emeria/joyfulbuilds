@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from './Map';
+// import Map from './Map';
 import EmailForm from './EmailForm';
 import '../styles/Contact.css';
 
