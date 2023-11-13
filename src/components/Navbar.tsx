@@ -13,6 +13,10 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
 
   return (
     <>
@@ -28,10 +32,10 @@ const Navbar: React.FC = () => {
           <Link to="#"><IonIcon icon={isMobileMenuOpen ? closeOutline : menuOutline} aria-label="nav-menu-toggle"></IonIcon></Link>
         </div>
         <ul className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link to="/portfolio" onClick={closeMenu}>Portfolio</Link></li>
+          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
 
