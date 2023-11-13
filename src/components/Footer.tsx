@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
 import { IonIcon } from '@ionic/react';
 import { logoLinkedin, logoGithub, logoTwitter } from 'ionicons/icons';
 import '../styles/Footer.css';
