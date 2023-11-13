@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import '../styles/About.css';
 
 
 const languagesDatabases: string[] = ["C#", "Java", "PHP", "Python", "JS", "MySQL", "SQL Server", "HTML", "CSS"];
@@ -16,9 +17,9 @@ const About: React.FC = () => {
     const sortedDevOpsTools = useMemo(() => sortItems(devOpsTools), [devOpsTools]);
 
     const renderCategoryList = (items: string[]) => (
-      <ul>
-        {items.map((item, index) => <li key={index}>{item}</li>)}
-      </ul>
+      <div className="capability-category">
+        {items.map((item, index) => <span className="expertise-item" key={index}>{item}</span>)}
+      </div>
     );
 
   return (
@@ -27,15 +28,17 @@ const About: React.FC = () => {
       <p>Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
 
       <h2 id="intro">Expertise</h2>
-      <ul>
-        {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST','DevOps','Mentorship/Coaching','Communication','Teamwork/Collaboration','Accessibility (WCAG)','Security','Cloud (Azure, AWS)', ''].map(capability =>
-          <li key={capability}>{capability}</li>
+      <div className="expertise-container">
+        {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST','DevOps','Mentorship/Coaching','Communication','Teamwork/Collaboration','Accessibility (WCAG)','Security','Cloud (Azure, AWS)', ''].map((capability, index) =>
+          <span 
+          className="expertise-item" 
+          key={index}>{capability}</span>
         )}
-      </ul>
+      </div>
 
       <br/>
 
-      <h2 id="intro">Capabilities</h2>
+      <h2 id="intro" className="capabilities-container">Capabilities</h2>
 
       <h3>Languages & Databases</h3>
       {renderCategoryList(sortedLanguagesDatabases)}

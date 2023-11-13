@@ -1,0 +1,51 @@
+.expertise-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    text-align: center;
+  }
+ 
+  .expertise-container li:not(:last-child)::after {
+    content: '•'; /* Unicode character for a dot */
+    margin-left: 10px;
+    color: #333;
+  }
+
+  .expertise-item {
+    display: inline; /* Or 'inline-block' based on your preference */
+  }
+  
+  .expertise-item:not(:last-child)::after {
+    content: ' • '; /* Unicode character for a dot with spaces */
+    color: #333; /* Adjust the color as needed */
+  }
+  
+
+  /* capabilities */
+  .capabilities-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+  }
+  
+  .capability-category {
+    list-style: none; /* Remove default list styling */
+  }
+  
+  .capability-category li:not(:last-child)::after {
+    content: '•'; /* Unicode character for a dot */
+    margin-left: 10px;
+    color: #333;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 600px) {
+    .capabilities-container {
+      grid-template-columns: 1fr; /* Single column */
+    }
+  }
+  

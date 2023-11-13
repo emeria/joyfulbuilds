@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {
   };
 
   if (isSubmitted) {
-    return <div>Thank you for your message! We will get back to you soon.</div>;
+    return <div className='email-form'>Thank you for your message! We will get back to you soon.</div>;
   }
 
   return (
