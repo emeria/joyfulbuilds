@@ -8,7 +8,7 @@ const Home : React.FC = () =>{
       <p>Build or refine your digital footprint.</p>
       
 
-      <h2 id="developer">Chris Gracia</h2>
+      <h2 className="developer">Chris Gracia</h2>
       <p>Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
       
 {/* implement portfolio section */}

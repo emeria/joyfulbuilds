@@ -17,7 +17,7 @@ const About: React.FC = () => {
   const sortedDevOpsTools = useMemo(() => sortItems(devOpsTools), [devOpsTools]);
 
   const renderCategoryList = (items: string[]) => (
-    <div className="capability-category">
+    <div className="capability-category" aria-label='capability-category'>
       {items.map((item, index) => <span className="capability-item" key={index}>{item}</span>)}
     </div>
   );
@@ -30,34 +30,38 @@ const About: React.FC = () => {
         <p className="intro-blurb">Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
         <p className="intro-details">Joyful Build is currently an agency of one. This means you will work directly with Chris Gracia, the founder of Joyful Build. </p>
       </div>
-      <h2 className="expertise-heading">Expertise</h2>
-      <div className="expertise-container">
-        {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS)'].map((capability, index) =>
-          <span
-            className="expertise-item"
-            key={index}>{capability}</span>
-        )}
+      <div className='expertise-section'>
+        <h2 className="expertise-heading">Expertise</h2>
+        <div className="expertise-container">
+          {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS)'].map((capability, index) =>
+            <span
+              className="expertise-item"
+              key={index}>{capability}</span>
+          )}
+        </div>
       </div>
 
       <br />
 
-      <h2 className="capabilities-heading">Capabilities</h2>
-      <div className="capabilities-container">
-        <div>
-          <h3>Languages & Databases</h3>
-          {renderCategoryList(sortedLanguagesDatabases)}
-        </div>
-        <div>
-          <h3>Systems & Platforms</h3>
-          {renderCategoryList(sortedSystemsPlatforms)}
-        </div>
-        <div>
-          <h3>Frameworks & Libraries</h3>
-          {renderCategoryList(sortedFrameworksLibraries)}
-        </div>
-        <div>
-          <h3>Development & Operations Tools</h3>
-          {renderCategoryList(sortedDevOpsTools)}
+      <div className='capabilities-section'>
+        <h2 className="capabilities-heading">Capabilities</h2>
+        <div className="capabilities-container">
+          <div>
+            <h3>Languages & Databases</h3>
+            {renderCategoryList(sortedLanguagesDatabases)}
+          </div>
+          <div>
+            <h3>Systems & Platforms</h3>
+            {renderCategoryList(sortedSystemsPlatforms)}
+          </div>
+          <div>
+            <h3>Frameworks & Libraries</h3>
+            {renderCategoryList(sortedFrameworksLibraries)}
+          </div>
+          <div>
+            <h3>Development & Operations Tools</h3>
+            {renderCategoryList(sortedDevOpsTools)}
+          </div>
         </div>
       </div>
 
