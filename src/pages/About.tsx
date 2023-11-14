@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import '../../styles/About.css';
+import '../styles/About.css';
 
 
 const languagesDatabases: string[] = ["C#", "Java", "PHP", "Python", "JS", "MySQL", "SQL Server", "HTML", "CSS"];
@@ -28,7 +28,7 @@ const About: React.FC = () => {
 
       <div className="intro-container">
         <p className="intro-blurb">Problem Solver. Technical Architect. Software and DevOps Engineer.</p>
-        <p className="intro-details">Joyful Build is currently an agency of one. This means you will work directly with Chris Gracia, the founder of Joyful Build. </p>
+        <p className="intro-details">Joyful Build is currently an agency of one. This means you will work directly with Chris Gracia, the founder of Joyful Build. Growth is important and learning never stops. If a skill is not listed, feel free to inquire about additional capabilities.</p>
       </div>
       <div className='expertise-section'>
         <h2 className="expertise-heading">Expertise<span className='dot'>.</span></h2>
