@@ -48,8 +48,11 @@
     font-weight: bold;
     letter-spacing: .2rem;
     color: #222;
-
 }
+.hero-link:hover {
+    color: white;
+    background-color: #14455e;
+  }
 
 @media screen and (max-width: 600px){
     .hero-title {
