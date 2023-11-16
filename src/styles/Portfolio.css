@@ -1,0 +1,96 @@
+/* Portfolio Page Styles */
+.portfolio-page {
+    gap: 20px;
+    margin: 5em 10em;
+}
+
+.portfolio-heading {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin: 2em;
+}
+
+.portfolio-heading h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.portfolio-title-container {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* Site Information */
+.portfolio-title-container h3 {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.portfolio-title-line {
+    flex-grow: 1; /* Let the line take up the remaining space */
+    height: 2px; /* Height of the line */
+    background-color: #000; /* Color of the line */
+}
+
+.portfolio-container {
+    border: 2px solid #000; /* Adjust border color and width as needed */
+    border-radius: 15px; /* Adjust for desired curvature */
+    padding: 20px; /* Adjust as needed */
+    padding-top: 40px; /* Extra padding to accommodate the title */
+    position: relative; /* Needed for positioning the title */
+    
+    margin: 2em 0;
+}
+
+.portfolio-title {
+    position: absolute;
+    top: -30px; /* Half of the height of the title to break the radius */
+    left: 20px; /* Adjust based on where you want the title */
+    background: #F8F8F8; /* Match the page background or box background */
+    padding: 5px 10px; /* Adjust as needed */
+    font-size: 2em;
+}
+
+/* Link Section */
+
+
+/* tech secton */
+.tech-section {
+    border-top: 1px solid #ccc; /* Thin line above the list */
+    border-bottom: 2px solid #333; /* Bolder line below the list */
+    padding: 10px 0; /* Spacing around the list */
+    margin-bottom: 20px;
+}
+
+.tech-label {
+    display: inline-block; /* Inline display */
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px; /* Space between the label and the list */
+}
+
+.tech-pill {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.tech-pill li {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* .tech-pill li:hover {
+    background-color: #45a049;
+} */
