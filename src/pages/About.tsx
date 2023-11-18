@@ -47,7 +47,7 @@ const About: React.FC = () => {
       <div className='expertise-section'>
         <h2 className="expertise-heading">Expertise<span className='dot'>.</span></h2>
         <div className="expertise-container">
-          {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS)'].map((capability, index) =>
+          {['Problem Solving', 'Agile Development', 'Standardization', 'HIPAA/HITRUST', 'DevOps', 'Mentorship/Coaching', 'Communication', 'Teamwork/Collaboration', 'Accessibility (WCAG)', 'Security', 'Cloud (Azure, AWS, GCP)'].map((capability, index) =>
             <span
               className="expertise-item"
               key={index}>{capability}</span>
