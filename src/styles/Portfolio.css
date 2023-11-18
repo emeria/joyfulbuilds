@@ -102,4 +102,10 @@
         margin: 5em 2em;
     }
 
+    .portfolio-heading {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+    }
+
 }
