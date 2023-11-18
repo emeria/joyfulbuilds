@@ -1,7 +1,7 @@
 /* Portfolio Page Styles */
 .portfolio-page {
     gap: 20px;
-    margin: 5em 10em;
+    margin:  3em 10em;
 }
 
 .portfolio-heading {
@@ -99,7 +99,7 @@
 
     .portfolio-page {
         gap: 20px;
-        margin: 5em 2em;
+        margin: 3em 2em;
     }
 
     .portfolio-heading {
