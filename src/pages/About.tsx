@@ -1,25 +1,39 @@
 import React, { useMemo } from 'react';
 import '../styles/About.css';
 
-
-const languagesDatabases: string[] = ["C#", "Java", "PHP", "Python", "JS", "MySQL", "SQL Server", "HTML", "CSS"];
-const systemsPlatforms: string[] = ["Hadoop", "Docker", "Kubernetes", "Prometheus", "Databricks", "Spark", "Kafka"];
-const frameworksLibraries: string[] = ["AngularJS/7", "React", "ASP.NET MVC", "Open Layers", "Open StreetMaps", "Signal R", "Service Stack", "Liferay", "Drupal", "WordPress"];
-const devOpsTools: string[] = ["SSIS", "SSRS", "Visual Studio", "Pentaho", "BizTalk", "Mongo DB", "Eclipse", "PowerShell", "Office", "Terraform", "Ansible", "Packer", "ELK", "Jenkins", "Github", "Docksal", "TFS", "Jira", "Airflow"];
+const categories = [
+  {
+    title: 'Languages & Databases',
+    items: ["C#", "Java", "PHP", "Python", "JS", "MySQL", "SQL Server", "HTML", "CSS"]
+  },
+  {
+    title: 'Systems & Platforms',
+    items: ["Hadoop", "Docker", "Kubernetes", "Prometheus", "Databricks", "Spark", "Kafka"]
+  },
+  {
+    title: 'Frameworks & Libraries',
+    items: ["AngularJS/7", "React", "ASP.NET MVC", "Open Layers", "Open StreetMaps", "Signal R", "Service Stack", "Liferay", "Drupal", "WordPress"]
+  },
+  {
+    title: 'Development & Operations Tools',
+    items: ["SSIS", "SSRS", "Visual Studio", "Pentaho", "BizTalk", "Mongo DB", "Eclipse", "PowerShell", "Office", "Terraform", "Ansible", "Packer", "ELK", "Jenkins", "Github", "Docksal", "TFS", "Jira", "Airflow"]
+  }
+];
 
 const About: React.FC = () => {
 
-  const sortItems = (items: string[]): string[] => [...items].sort();
+  const sortedCategories = useMemo(() => categories.map(category => ({
+    ...category,
+    items: [...category.items].sort()
+  })), []);
 
-  const sortedLanguagesDatabases = useMemo(() => sortItems(languagesDatabases), [languagesDatabases]);
-  const sortedSystemsPlatforms = useMemo(() => sortItems(systemsPlatforms), [systemsPlatforms]);
-  const sortedFrameworksLibraries = useMemo(() => sortItems(frameworksLibraries), [frameworksLibraries]);
-  const sortedDevOpsTools = useMemo(() => sortItems(devOpsTools), [devOpsTools]);
-
-  const renderCategoryList = (items: string[]) => (
-    <div className="capability-category" aria-label='capability-category'>
-      {items.map((item, index) => <span className="capability-item" key={index}>{item}</span>)}
-    </div>
+  const renderCategoryList = (category: { title: string, items: string[] }) => (
+    <>
+      <h3>{category.title}</h3>
+      <div className="capability-category" aria-label='capability-category'>
+        {category.items.map((item, index) => <span className="capability-item" key={index}>{item}</span>)}
+      </div>
+    </>
   );
 
   return (
@@ -46,22 +60,11 @@ const About: React.FC = () => {
       <div className='capabilities-section'>
         <h2 className="capabilities-heading">Capabilities<span className='dot'>.</span></h2>
         <div className="capabilities-container">
-          <div>
-            <h3>Languages & Databases</h3>
-            {renderCategoryList(sortedLanguagesDatabases)}
-          </div>
-          <div>
-            <h3>Systems & Platforms</h3>
-            {renderCategoryList(sortedSystemsPlatforms)}
-          </div>
-          <div>
-            <h3>Frameworks & Libraries</h3>
-            {renderCategoryList(sortedFrameworksLibraries)}
-          </div>
-          <div>
-            <h3>Development & Operations Tools</h3>
-            {renderCategoryList(sortedDevOpsTools)}
-          </div>
+          {sortedCategories.map((category, index) => (
+            <div key={index}>
+              {renderCategoryList(category)}
+            </div>
+          ))}
         </div>
       </div>
 
