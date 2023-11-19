@@ -55,6 +55,12 @@
   }
 
 @media screen and (max-width: 600px){
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .hero-title {
         background: -webkit-linear-gradient(#eee, #c27ffb);

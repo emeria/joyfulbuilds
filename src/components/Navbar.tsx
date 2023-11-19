@@ -1,22 +1,14 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { IonIcon } from '@ionic/react';
 import { menuOutline, closeOutline } from 'ionicons/icons';
 import logo from '../assets/joyfulbuild.png';
+import { MobileMenuContext } from './MobileMenuContext';
 
 const Navbar: React.FC = () => {
 
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isMobileMenuOpen, toggleMobileMenu, closeMenu } = useContext(MobileMenuContext);
 
   return (
     <>
@@ -24,6 +16,7 @@ const Navbar: React.FC = () => {
         <span className="spacer"></span>
       </div>
 
+      {/* Rest of your Navbar component */}
       <nav>
         <div className="logo">
           <Link to="/"><img src={logo} alt="Joyful Build Logo" />Joyful Build</Link>
