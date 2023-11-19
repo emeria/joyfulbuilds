@@ -13,16 +13,16 @@ const App: React.FC = () => {
     <>
       <Router>
         <MobileMenuProvider>
-        <Navbar />
-        <div className='content-wrapper'>
-          <Routes >
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-        
+          <Navbar />
+          <div className='content-wrapper'>
+            <Routes >
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+
         </MobileMenuProvider>
         <Footer />
       </Router>
