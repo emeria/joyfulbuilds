@@ -118,6 +118,10 @@ nav a:hover {
     right: 20px;
     cursor: pointer;
   }
+
+  .logo a {
+    font-size: 25px;
+  }
 }
 
 .content-wrapper {
