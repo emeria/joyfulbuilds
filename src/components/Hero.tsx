@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <>
                 <div className='hero'>
                     {/* <img alt='Hero Image' src="src\assets\joyfulbuild.png" /> */}
-                    <div className='gradient'></div>
+                    {/* <div className='gradient'></div> */}
                     <div className={`hero-text ${isMobileMenuOpen ? 'open' : ''}`}>
                         <h1 className="hero-title">Development should be fun.</h1>
                         <p className='hero-subtitle'>Build or refine your digital footprint.</p>
