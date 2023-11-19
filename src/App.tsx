@@ -14,7 +14,6 @@ const App: React.FC = () => {
       <Router>
         <MobileMenuProvider>
         <Navbar />
-        </MobileMenuProvider>
         <div className='content-wrapper'>
           <Routes >
             <Route path="/" element={<Home />} />
@@ -23,6 +22,8 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+        
+        </MobileMenuProvider>
         <Footer />
       </Router>
     </>
