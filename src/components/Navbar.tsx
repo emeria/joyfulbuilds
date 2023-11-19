@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { IonIcon } from '@ionic/react';
 import { menuOutline, closeOutline } from 'ionicons/icons';
-import logo from '../assets/joyfulbuild.png';
+// import logo from '../assets/joyfulbuild.png';
 import { MobileMenuContext } from './MobileMenuContext';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
 
@@ -19,7 +20,8 @@ const Navbar: React.FC = () => {
       {/* Rest of your Navbar component */}
       <nav>
         <div className="logo">
-          <Link to="/"><img src={logo} alt="Joyful Build Logo" />Joyful Build</Link>
+          {/* <Link to="/"><img src={logo} alt="Joyful Build Logo" />Joyful Build</Link> */}
+          <Link to="/"><Logo/>Joyful Build</Link>
         </div>
         <div className="toggle" onClick={toggleMobileMenu}>
           <Link to="#"><IonIcon icon={isMobileMenuOpen ? closeOutline : menuOutline} aria-label="nav-menu-toggle"></IonIcon></Link>

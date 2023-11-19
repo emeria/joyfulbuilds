@@ -1,0 +1,60 @@
+* {
+    --border-color: #053149;
+    --inner-color: #FFD025;
+    --inner-diameter: 80px;
+    
+  }
+  
+  .cog {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--inner-color); /* Cog color */
+    /* margin: 50px; To view it properly */
+    border: 3px solid var(--border-color); /* Border around the cog */
+    border-width: thick;
+  }
+  
+  /* The rest of the CSS for teeth, smiley face, etc., remains the same */
+  
+  
+  .tooth {
+    width: 23px; /* Slightly wider to overlap */
+    height: 23px; /* Slightly taller to overlap */
+    background-color: var(--inner-color); /* Same as cog color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%; 
+    border-bottom: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color); /* Border only on the right side */
+    border-top: 3px solid var(--border-color); /* Border only on the top side */
+    box-sizing: border-box;
+    border-radius: 15%;
+    border-width: thick;
+  }
+  
+  /* Position each tooth */
+  .cog .tooth {
+    transform: translate(-50%, -50%) rotate(0deg) translate(60px);
+  }
+  .cog .tooth:nth-child(2) { transform: translate(-50%, -50%) rotate(45deg) translate(60px); }
+  .cog .tooth:nth-child(3) { transform: translate(-50%, -50%) rotate(90deg) translate(60px); }
+  .cog .tooth:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg) translate(60px); }
+  .cog .tooth:nth-child(5) { transform: translate(-50%, -50%) rotate(180deg) translate(60px); }
+  .cog .tooth:nth-child(6) { transform: translate(-50%, -50%) rotate(225deg) translate(60px); }
+  .cog .tooth:nth-child(7) { transform: translate(-50%, -50%) rotate(270deg) translate(60px); }
+  .cog .tooth:nth-child(8) { transform: translate(-50%, -50%) rotate(315deg) translate(60px); }
+  
+  .cog:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var( --inner-diameter); /* Size of the inner circle */
+    height: var( --inner-diameter); /* Size of the inner circle */
+    background-color: var(--border-color); /* Color of the inner circle */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
