@@ -90,4 +90,17 @@
     border-width: thick;
   }
   
-  
+
+.inner-circle .eye,
+.inner-circle .mouth {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease; /* Smooth transition for the hover effect */
+}
+
+/* When hovering over the cog, the smiley face elements become visible */
+.cog:hover .inner-circle .eye,
+.cog:hover .inner-circle .mouth {
+  visibility: visible;
+  opacity: 1;
+}
