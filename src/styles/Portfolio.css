@@ -2,6 +2,7 @@
 .portfolio-page {
     gap: 20px;
     margin:  3em 10em;
+    position: relative;
 }
 
 .portfolio-heading {

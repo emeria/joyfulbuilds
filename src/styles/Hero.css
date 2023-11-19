@@ -55,6 +55,7 @@
   }
 
 @media screen and (max-width: 600px){
+
     .hero-title {
         background: -webkit-linear-gradient(#eee, #c27ffb);
         -webkit-background-clip: text;
