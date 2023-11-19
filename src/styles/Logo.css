@@ -1,6 +1,8 @@
 * {
-    --border-color: #053149;
-    --inner-color: #FFD025;
+    --border-color: #042E42;
+    --cog-color: #1DA0DF;
+    --inner-color: #053149;
+    --smiley-color: #FECE26;
     --inner-diameter: 80px;
     
   }
@@ -10,19 +12,15 @@
     height: 100px;
     border-radius: 50%;
     position: relative;
-    background-color: var(--inner-color); /* Cog color */
-    /* margin: 50px; To view it properly */
+    background-color: var(--cog-color); /* Cog color */
     border: 3px solid var(--border-color); /* Border around the cog */
     border-width: thick;
   }
   
-  /* The rest of the CSS for teeth, smiley face, etc., remains the same */
-  
-  
   .tooth {
     width: 23px; /* Slightly wider to overlap */
     height: 23px; /* Slightly taller to overlap */
-    background-color: var(--inner-color); /* Same as cog color */
+    background-color: var(--cog-color); /* Same as cog color */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,7 +45,8 @@
   .cog .tooth:nth-child(7) { transform: translate(-50%, -50%) rotate(270deg) translate(60px); }
   .cog .tooth:nth-child(8) { transform: translate(-50%, -50%) rotate(315deg) translate(60px); }
   
-  .cog:after {
+  /* Inner circle */
+  .inner-circle {
     content: '';
     position: absolute;
     top: 50%;
@@ -57,4 +56,38 @@
     background-color: var(--border-color); /* Color of the inner circle */
     border-radius: 50%;
     transform: translate(-50%, -50%);
+  
   }
+  
+  .eye {
+    width: 10px;
+    height: 10px;
+    background-color: var(--smiley-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .left-eye {
+    left: 20px;
+  }
+  
+  .right-eye {
+    right: 20px;
+  }
+  
+  .mouth {
+    position: absolute;
+    bottom: 20px; /* Adjust to position the mouth correctly within the inner circle */
+    left: 50%;
+    width: 30px; /* Width of the mouth */
+    height: 15px; /* Height of the mouth */
+    border: 2px solid var(--smiley-color); /* Defines the line thickness */
+    border-radius: 30px 30px 0 0; /* Full rounding on the top side */
+    border-bottom: none; /* Removes bottom border */
+    transform: translateX(-50%) rotate(180deg); /* Center the mouth and rotate if needed */
+    clip-path: inset(0 0 50% 0); /* Clips the bottom half to create a semi-circle */
+    border-width: thick;
+  }
+  
+  
